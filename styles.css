@@ -1,0 +1,220 @@
+@import url("https://fonts.googleapis.com/css2?family=Raleway&display=swap");
+
+*,
+::before,
+::after {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 62.5%;
+  font-family: "Raleway", sans-serif;
+  height: 100%;
+}
+
+body {
+  color: white;
+}
+
+header {
+  background-color: red;
+  color: white;
+  min-width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 10;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+ul {
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+#navbar a {
+  font-size: 2.2rem;
+  padding: 2rem;
+  display: block;
+  transition: background-color 0.2s ease-in-out;
+}
+
+#navbar {
+  display: flex;
+  justify-content: flex-end;
+}
+
+#navbar ul {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  margin-right: 1.5rem;
+}
+
+#navbar ul li {
+  list-style: none;
+  display: block;
+}
+
+#navbar a:hover {
+  background-color: rgb(117, 104, 237);
+}
+
+#welcome-section {
+  width: 100%;
+  height: 100dvh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background-color: #222222;
+  background: linear-gradient(45deg, rgb(77, 76, 76), #222222);
+}
+
+.welcome-container {
+  width: min(80%, 1200px);
+}
+
+#welcome-section h1 {
+  font-size: 8em;
+}
+
+#welcome-section .welcome-subtitle {
+  font-size: 5em;
+  font-style: italic;
+  color: red;
+  opacity: 70%;
+  margin-bottom: 5rem;
+}
+
+#welcome-description {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+#welcome-description * {
+  text-align: start;
+  font-size: 4rem;
+  list-style: none;
+}
+
+#welcome-description a {
+  transition: color 0.5s ease-in-out;
+}
+
+#welcome-description a:hover {
+  color: blueviolet;
+}
+
+#projects {
+  background-color: #45567d;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 10rem 0;
+}
+
+.projects-header {
+  font-size: 5rem;
+  text-decoration: underline;
+  margin-bottom: 10rem;
+}
+
+.my-projects {
+  width: min(100%, 1200px);
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 4rem;
+  margin-bottom: 6rem;
+}
+
+.project-tile {
+  background-color: #222222;
+  padding: 0;
+  border-radius: 10px;
+  box-shadow: 2px -2px 4px 4px black;
+  transition: all 0.2s ease;
+}
+
+.project-tile:hover {
+  box-shadow: 5px -5px 8px 8px black;
+  transform: translateY(-10px) translateX(10px) scale(1.05);
+}
+
+.project-tile:hover .p-style {
+  display: inline;
+  color: orange;
+}
+
+.my-projects .project-preview {
+  object-fit: cover;
+  height: 425px;
+  width: 100%;
+  border-radius: 10px 10px 0 0;
+}
+
+.my-projects .project-name {
+  font-size: 2rem;
+  text-align: center;
+  text-shadow: #efefef 1px 1px 2px;
+}
+
+.p-style {
+  display: none;
+  transition: all 1s ease;
+}
+
+#contact {
+  position: relative;
+  width: 100%;
+  height: 100dvh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(45deg, #4e4c67, #2c2b3b);
+}
+
+.contacts-header {
+  font-size: 7rem;
+  margin-bottom: 3rem;
+}
+
+.social-links {
+  display: flex;
+  justify-content: space-around;
+  font-size: 3rem;
+  transition: all 0.2s ease;
+}
+
+.social-link {
+  transition: all 0.2s ease;
+}
+
+.social-link:hover {
+  transform: translateY(-20%);
+}
+
+#footer {
+  position: absolute;
+  bottom: 0;
+  font-size: 1.5rem;
+}
