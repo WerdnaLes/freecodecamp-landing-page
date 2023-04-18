@@ -109,7 +109,7 @@ a {
   justify-content: center;
 }
 
-#welcome-description * {
+#welcome-description {
   text-align: start;
   font-size: 4rem;
   list-style: none;
@@ -133,17 +133,19 @@ a {
 }
 
 .projects-header {
+  text-align: center;
   font-size: 5rem;
   text-decoration: underline;
   margin-bottom: 10rem;
 }
 
 .my-projects {
-  width: min(100%, 1200px);
+  width: min(90%, 1200px);
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 4rem;
   margin-bottom: 6rem;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
 }
 
 .project-tile {
@@ -166,7 +168,7 @@ a {
 
 .my-projects .project-preview {
   object-fit: cover;
-  height: 425px;
+  height: calc(100% - 6.8rem);
   width: 100%;
   border-radius: 10px 10px 0 0;
 }
@@ -191,6 +193,7 @@ a {
   justify-content: center;
   align-items: center;
   background: linear-gradient(45deg, #4e4c67, #2c2b3b);
+  text-align: center;
 }
 
 .contacts-header {
@@ -217,4 +220,44 @@ a {
   position: absolute;
   bottom: 0;
   font-size: 1.5rem;
+}
+
+@media screen and (max-width: 770px) {
+  #welcome-section h1 {
+    font-size: 6rem;
+  }
+
+  #welcome-section .welcome-subtitle {
+    font-size: 3rem;
+  }
+
+  #welcome-description {
+    font-size: 2.8rem;
+  }
+
+  .projects-header {
+    font-size: 4rem;
+  }
+}
+
+@media screen and (max-width: 570px) {
+  #welcome-section h1 {
+    font-size: 5rem;
+  }
+
+  #welcome-section .welcome-subtitle {
+    font-size: 2.5rem;
+  }
+
+  #welcome-description {
+    font-size: 2.3rem;
+  }
+
+  .contacts-header {
+    font-size: 4rem;
+  }
+
+  .social-links {
+    font-size: 2rem;
+  }
 }
