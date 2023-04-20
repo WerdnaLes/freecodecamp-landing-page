@@ -85,6 +85,7 @@ a {
   flex-direction: column;
   background-color: #222222;
   background: linear-gradient(45deg, rgb(77, 76, 76), #222222);
+  font-size: 7em;
 }
 
 .welcome-container {
@@ -92,11 +93,11 @@ a {
 }
 
 #welcome-section h1 {
-  font-size: 8em;
+  font-size: 1em;
 }
 
 #welcome-section .welcome-subtitle {
-  font-size: 5em;
+  font-size: 0.6em;
   font-style: italic;
   color: red;
   opacity: 70%;
@@ -107,11 +108,8 @@ a {
   display: flex;
   flex-direction: column;
   justify-content: center;
-}
-
-#welcome-description {
   text-align: start;
-  font-size: 4rem;
+  font-size: 0.5em;
   list-style: none;
 }
 
@@ -223,16 +221,8 @@ a {
 }
 
 @media screen and (max-width: 770px) {
-  #welcome-section h1 {
-    font-size: 6rem;
-  }
-
-  #welcome-section .welcome-subtitle {
-    font-size: 3rem;
-  }
-
-  #welcome-description {
-    font-size: 2.8rem;
+  #welcome-section {
+    font-size: 5.5em;
   }
 
   .projects-header {
@@ -241,16 +231,8 @@ a {
 }
 
 @media screen and (max-width: 570px) {
-  #welcome-section h1 {
-    font-size: 5rem;
-  }
-
-  #welcome-section .welcome-subtitle {
-    font-size: 2.5rem;
-  }
-
-  #welcome-description {
-    font-size: 2.3rem;
+  #welcome-section {
+    font-size: 5em;
   }
 
   .contacts-header {
