@@ -151,16 +151,15 @@ a {
   border-radius: 10px;
   box-shadow: 2px -2px 4px 4px black;
   transition: all 0.2s ease;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 .project-tile:hover {
   box-shadow: 5px -5px 8px 8px black;
   transform: translateY(-10px) translateX(10px) scale(1.05);
-}
-
-.project-tile:hover .p-style {
-  display: inline;
-  color: orange;
 }
 
 .my-projects .project-preview {
@@ -174,11 +173,33 @@ a {
   font-size: 2rem;
   text-align: center;
   text-shadow: #efefef 1px 1px 2px;
+  position: relative;
+  width: fit-content;
 }
 
-.p-style {
-  display: none;
-  transition: all 1s ease;
+.my-projects .project-name::before,
+.my-projects .project-name::after {
+  transition: all 250ms ease-in-out;
+}
+
+.my-projects .project-name::before {
+  content: "< ";
+  position: absolute;
+  left: -1.3ch;
+  transform: scale(0);
+}
+
+.my-projects .project-name::after {
+  content: " />";
+  position: absolute;
+  right: -2.5ch;
+  transform: scale(0);
+}
+
+.project-tile:hover .project-name::before,
+.project-tile:hover .project-name::after {
+  color: orange;
+  transform: scale(1);
 }
 
 #contact {
